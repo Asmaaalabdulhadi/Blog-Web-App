@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+
+  
+
+    <div class="container">
+
+
+      <form action="/editePos/currentID" method="PATCH">
+
+        <div class="form-group">
+          <label for="title">Post Topic</label><br>
+          <input type="text" name="title" placeholder="title" class="form-control"><br>
+        </div>
+
+        <div class="form-group">
+          <label for="date">date:</label><br>
+          <input type="date" name="date" placeholder="202"><br>
+        </div>
+
+        <label for="Auth">author</label><br>
+
+        <select class="form-control" name="author">
+          <option>Asmaa</option>
+          <option>Lola</option>
+          <option>Sandy</option>
+        </select>
+
+        <label for="content">Content</label><br>
+        <textarea class="form-control" name="content" placeholder="Today's article" rows="3"></textarea><br><br>
+
+    </div>
+
+    <input type="submit" value="create post">
+    </form>
+
+    </div>
+
+
+    <%- include("partials/footer.ejs") %>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

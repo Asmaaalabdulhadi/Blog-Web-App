@@ -1,0 +1,29 @@
+1. create files:
+index.js
+folder 
+public folder(inside: styles folder (inside: main.css)
+views folder( inside : index.ejs, folder:partials inside(footer.ejs, header.ejs))
+then cd to the directory in command prompt by
+cd directoryPath
+
+2.initialize npm
+npm init
+
+3.make package type= module instead of commonjs inside package.json
+
+4.install express, EJS
+npm i express
+
+5. write server application in index.js
+
+6.install EJS in vs code if not already installed,then
+npm install ejs
+
+
+run app 
+in command prompt:
+nodemon index.js
+in bowser:
+localhost:3000
+
+7.put bottuns in index.ejs
