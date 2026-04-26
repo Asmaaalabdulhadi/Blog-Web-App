@@ -1,0 +1,144 @@
+how to use git:
+--------------------
+add a local respository:
+--------------------------
+cd desktop
+
+mkdir story
+
+cd story
+
+list all folders and files in the directory:
+ls  
+equivilant 
+dir
+
+create file:
+touch filename.txt
+equivalent:
+echo this lesson sucks >mmyfile.txt
+
+open -a filename.txt
+equivalent
+start ch1.txt
+
+initialize git respository in current folder
+git init
+
+see whats inside the staging area:
+git status
+if files are in green then they are in, if red then they are not
+
+to add files to staging area :
+git add ch1.txt
+
+to un-add aka unstage a file
+git reset file/foldername
+
+to commit the file:
+git commit -m "comment About The file changes" 
+
+code .gitignore
+
+git log
+will tell us who made the commit
+
+to add all files to staging area:
+git add .
+
+git commit -m "finished ch 2 and 3"
+
+git log
+we will find 2 different commits
+
+save on ch3 with gibberish
+
+git status 
+will tell us there has been modifications made on a file
+
+tell us what are yhe differences: 
+git diff
+
+rollback to last change:
+git checkout ch3.txt
+-------------------------------------
+create a remote respository:
+git remote add origin urlOfRemoteRespositoryWeGotFromGithub
+so 
+git remote add origin https://github.com/Asmaaalabdulhadi/story.git
+git branch -M main
+
+push therespository to the remote one:
+git push -u origin main
+ 
+
+result: we will find all our files from the local resposirory are now in the GitHub respository
+------------------------------------
+lesson 219 gitignore:
+====================
+create files 
+file1.txt
+file2.txt
+secrets.txt
+
+git init
+
+to remove files from staging area 
+git rm --cached -r .
+
+check if they were all removed by using 
+git status
+
+createtthe .gitignore
+echo secrets.txt>.gitignore
+start .gitignore
+
+
+inside:
+to ignore all files of txt format we use:
+ *.txt
+
+to comment use #
+-------------------------------------------------
+git cloning
+
+git clone urlfomGithub
+
+example:
+git clone https://github.com/clupasq/word-mastermind.git
+cd word-mastermind
+npm install
+npm start
+
+we see a result including 
+http: 3333
+so we type in browswer:
+localhost:3333
+------------------------------------------------
+branch commnad
+git branch alien-plot
+
+to know what branches do i have, con=mmand
+git branch
+
+the * shows me which branch im in
+
+to switch to the other branch , use command:
+git checkout Alien-plot
+
+now do changes to ch1 and 2
+
+then commit it
+git add .
+git commit -m "modified ch1 and 2"
+git log
+
+now go to main branch
+git branch
+git checkout main
+
+git merge alien-plot
+save and quit the merge message
+
+now push it online
+git push origin main -u
